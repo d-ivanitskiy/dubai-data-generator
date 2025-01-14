@@ -1,0 +1,80 @@
+{
+  "compilerOptions": {
+    "baseUrl": "./src",
+    "paths": {
+      "@lib/*": [
+        "./shared/lib/*"
+      ],
+      "@lib": [
+        "./shared/lib/"
+      ],
+      "@pages/*": [
+        "./pages/*"
+      ],
+      "@pages": [
+        "./pages/"
+      ],
+      "@shared/": [
+        "./shared/"
+      ],
+      "@shared/*": [
+        "./shared/*"
+      ],
+      "@components/*": [
+        "./components/*"
+      ],
+      "@components": [
+        "./components/"
+      ],
+      "@ui/*": [
+        "./shared/ui/*"
+      ],
+      "@ui": [
+        "./shared/ui"
+      ],
+      "@api/*": [
+        "./shared/api/*"
+      ],
+      "@api": [
+        "./shared/api/"
+      ],
+      "@assets": [
+        "./shared/assets/"
+      ],
+      "@assets/*": [
+        "./shared/assets/*"
+      ],
+      "@consts": [
+        "./shared/consts/"
+      ],
+      "@consts/*": [
+        "./shared/consts/*"
+      ],
+      "@configs": [
+        "./shared/configs/"
+      ],
+      "@configs/*": [
+        "./shared/configs/*"
+      ],
+      "@i18n": [
+        "./shared/configs/i18n"
+      ],
+      "@i18n/*": [
+        "./shared/configs/i18n/*"
+      ],
+      "@modules": [
+        "./modules/"
+      ],
+      "@modules/*": [
+        "./modules/*"
+      ],
+      "@features/": [
+        "./features/"
+      ],
+      "@features/*": [
+        "./features/*"
+      ]
+    }
+    // "typeRoots": ["./node_modules/@types/", "./global.d.ts/", "src/index.d.ts"]
+  }
+}

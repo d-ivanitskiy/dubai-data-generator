@@ -1,0 +1,76 @@
+{
+  "env": {
+    "browser": true,
+    "es2021": true,
+    "jest": true
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:@typescript-eslint/recommended",
+    "prettier",
+    "plugin:prettier/recommended"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": "latest",
+    "sourceType": "module"
+  },
+  "plugins": [
+    "react",
+    "react-hooks",
+    "@typescript-eslint",
+    "prettier",
+    "simple-import-sort"
+  ],
+  "rules": {
+    "react/jsx-curly-brace-presence": [
+      "warn",
+      { "props": "never", "children": "never" }
+    ],
+    "react/react-in-jsx-scope": "off",
+    "no-extra-boolean-cast": "off",
+    "no-duplicate-imports": "error",
+    "prettier/prettier": ["warn", { "endOfLine": "auto" }],
+    "@typescript-eslint/no-explicit-any": "warn",
+    "@typescript-eslint/ban-ts-comment": [
+      "error",
+      { "ts-ignore": "allow-with-description" }
+    ],
+    "react/display-name": "off",
+    "prefer-const": "off",
+    "no-debugger": "off",
+    "simple-import-sort/imports": "warn",
+    "simple-import-sort/exports": "warn"
+  },
+  "settings": {
+    "import/resolver": { "typescript": {} },
+    "react": { "pragma": "React", "version": "detect" }
+  },
+  "overrides": [
+    {
+      "files": ["*.ts", "*.tsx"],
+      "rules": {
+        "quotes": ["error", "double"],
+        "simple-import-sort/imports": [
+          "warn",
+          {
+            "groups": [
+              ["^react", "^@?\\w", "^[a-zA-Z]/.*|$"],
+              [
+                "^(@(app|configs|i18n|lib|api|consts|modules|pages|components|assets|shared|ui))(/.*|$)",
+                "^\\./(?=.*/)(?!/?$)",
+                "^\\.(?!/?$)",
+                "^\\./?$"
+              ]
+            ]
+          }
+        ],
+        "simple-import-sort/sort": "off"
+      }
+    }
+  ]
+}
