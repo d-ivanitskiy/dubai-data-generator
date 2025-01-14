@@ -1,50 +1,62 @@
-# React + TypeScript + Vite
+## Общие элементы
+Правый верхний угол
+Кнопки:
+GITLAB, ARGOCD, TABLE, REGRESS, UI KIT
+Нажатие по кнопке открывает новую вкладку с cсылкой
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Слева кнопки TEST и DEV - по сути radio button (по умолчанию вырано TEST) - независимо от табы на которой находится пользователь переключает
+ссылки для кнопок:
+CAMUNDA, PG, KK
 
-Currently, two official plugins are available:
+## Табы
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## DUBAI
 
-## Expanding the ESLint configuration
+Наполнение
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+Кнопки:
+SUMSUB, DEV 1, DEV 2, DEV 3, STABLE, PROD, PG, KK, CAMUNDA
+Нажатие по кнопке открывает новую вкладку с cсылкой
 
-- Configure the top-level `parserOptions` property like this:
+## Поле ввода слева от кнопки SUMSUB SDK и сам SUMSUB SDK ДЕН
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+Поле с данными - TAX ID генерирует идентификационный номер налогоплательщика согласно регулярному выражению ```/^[\w]{1}[\w-\.]*@[\w-]+\.[a-z]{2,4}$/i```.
+Кнопка слева от поля ИНН, генерирует ИНН заново
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
 
-```js
-// eslint.config.jsasdasdasd
-import react from 'eslint-plugin-react'
+Кнопка CLIENT - при нажатии меняет цвет на "активный", текст на кнопке меняется на  "HIDE" нажатие на кнопку HIDE - убирает меню, текст и цвет кнопки меняются на первоначальный
+открывает скрытое меню
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+Кнопка "GENERATE" генерирует случайные данные во всех полях (также заново генерируется и TAX ID).
+При повторном нажатии на кнопку "GENERATE", данные генерируются повторно (также заново генерируется и TAX ID).
+
+Поле "Nubder" генерирует номер телефона РФ в международном формате без кода страны.
+
+Поля "Last name", "Name", "Middle name" генерируют данные согласно данным находящихся в приложенных файлах переведённых в их транслитерацию.
+Учитывать, что данные генерируется консистентно - согласно полу оплерелённому случайным образом.
+
+Поле "Password" всегда "Abcd1234".
+
+Поле "E-mail" генерирует адрес электронной почты согласно регулярному выражению ```^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$```.
+
+Кнопка COPY ALL - копирует все данные в бувер обмена (включая ИНН)
+Справа от каждого поля с данными есть кнопка для копирования данных в этом поле
+
+## ADMIN
+Кнопки:
+DEV, STABLE, PG, KK
+Нажатие по кнопке открывает новую вкладку с cсылкой
+
+поля с данными
+admin, support, notact-centr, info-sec, sale, userDubai, otcTrader - заполнены согласно макету
+Справа от каждого поля с данными есть кнопка для копирования данных в этом поле
+
+## OFFLINE -
+Кнопки:
+SUMSUB, DEV, STABLE, PG, KK, CAMUNDA
+Нажатие по кнопке открывает новую вкладку с cсылкой
+
+## CREDS -
+поля с данными
+SUMSUB, PG, KK, CAMUNDA, FIGMA - заполнены согласно макету
+Справа от каждого поля с данными есть кнопка для копирования данных в этом поле
